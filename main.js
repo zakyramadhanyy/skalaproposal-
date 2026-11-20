@@ -650,6 +650,9 @@
 
   const { gsap } = window;
   gsap.registerPlugin(ScrollTrigger);
+  // Phones resize the viewport whenever the address bar slides in or out; without this every slide re-measures every
+  // trigger mid-scroll and the page jumps.
+  ScrollTrigger.config({ ignoreMobileResize: true });
   const EASE_OUT = 'power4.out';       // cubic-bezier(.23,1,.32,1)
   const EASE_IN_OUT = 'power3.inOut';  // cubic-bezier(.77,0,.175,1)
 
@@ -666,7 +669,8 @@
     const m = isMobile();
     gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true, invalidateOnRefresh: true } })
       .to('.hero-background-image', { yPercent: m ? -30 : (lenis ? -20 : -50), ease: 'none' })
-      .to('.hero-background-image', { filter: `brightness(${m ? 0.5 : (lenis ? 0.45 : 0.32)})`, ease: 'power1.out' }, 0);
+      // Same darkening as before (brightness 0.5 / 0.45 / 0.32), done with the .hero-dim layer's opacity: far cheaper on phones.
+      .to('.hero-dim', { opacity: m ? 0.5 : (lenis ? 0.55 : 0.68), ease: 'power1.out' }, 0);
   }
 
   /* ---------- navbar: transparent over the hero, hide on scroll down ---------- */

@@ -16,6 +16,7 @@
 /* Hallmark · dismissed 49 · .btn__text sets white-space: nowrap; the repeated label is the hover roll, two copies aria-hidden */
 
 /* Hallmark · waive 7b · pure #fff type on the Latest news band · the band is near-black green and white is the one value that reads at full strength there; the brief names #ffffff for this band's type, which a tint would break */
+/* Hallmark · dismissed 41 · .hero-dim is an empty, pointer-less shade layer; the hero text above it already sets its own white colour */
 /* ---------- tokens ---------- */
 :root {
   --c-ink: #171717;
@@ -29,6 +30,7 @@
   --c-focus-ink: #171717;
   --c-cream: #f5eee9;
   --c-practice: #f1f1f1;
+  --c-dim: rgb(0 0 0);
   --c-white-line: rgb(250 249 246 / 0.45);
   --c-news-ink: #ffffff;
   --c-news-hover: #596f0a;
@@ -159,6 +161,10 @@ h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 .hero-bg-current { z-index: 1; }
 .hero-bg-next { z-index: 2; clip-path: inset(0% 0% 100% 0%); }
 
+/* The hero darkens as it scrolls away through this layer's opacity (black at opacity x looks the same as brightness(1 - x)),
+   so the browser fades one layer instead of re-filtering the full-screen photo every frame. Same stacking level as the
+   content, placed before it, so it sits over both photos and under the text. */
+.hero-dim { position: absolute; inset: 0; z-index: 2; background-color: var(--c-dim); opacity: 0; pointer-events: none; will-change: opacity; }
 .hero-content { z-index: 2; justify-content: center; align-items: center; width: 100%; display: flex; position: relative; }
 .hero-line { justify-content: space-between; align-items: center; gap: 8px; width: 100%; padding: 0 var(--gutter); display: flex; }
 .hero-line > * { flex: 1; min-width: 0; }
@@ -366,7 +372,12 @@ html.lenis, html.lenis body { height: auto; }
 .go .peta-pin__stem { background: linear-gradient(to top, var(--n-stem-a), var(--n-stem-b)); }
 .go .peta-pin__dot { box-shadow: 0 0 0 4px var(--pin-ring), 0 0 0 1.5px var(--go-surface), 0 4px 10px var(--pin-drop); }
 .go .peta-pin[data-cat="tambahan"] .peta-pin__dot { background: var(--c-night); border-color: var(--go-surface); box-shadow: 0 0 0 1px var(--c-night), 0 0 0 5px var(--n-drop-t), 0 4px 10px var(--pin-drop); }
-@media (max-width: 767px) { .go__geo { margin-top: 24px; } .go .peta__lbl, .go .peta__deg, .go .peta__scale { display: none; } }
+@media (max-width: 767px) {
+  .go__geo { margin-top: 24px; }
+  .go .peta__lbl, .go .peta__deg, .go .peta__scale { display: none; }
+  /* No filled box behind the map on phones: it sits on the section's own ground and scrolls with the page. */
+  .go__geo .wk__stage { position: relative; top: auto; background: transparent; }
+}
 
 /* ---------- pill button (second reference: label box + icon box) ---------- */
 .btn-pill { display: inline-flex; gap: 4px; width: fit-content; color: var(--c-olive); font-family: var(--font-regular); font-weight: 500; font-size: 14px; line-height: 1; letter-spacing: -.02em; position: relative; overflow: hidden; }
