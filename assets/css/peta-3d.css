@@ -1,0 +1,85 @@
+/* =============================================================================
+   PETA 3D — gaya komponen (assets/js/peta-3d.js). Tata letak stage diatur halaman.
+   Variabel yang dibaca: --rx (tilt), --tx/--ty/--k (kamera, diisi JS).
+   Warna mengikuti token proyek dengan fallback agar komponen berdiri sendiri.
+   ============================================================================= */
+/* Token block: the component's own colours, unchanged, named so a page can override them. */
+:root {
+  --pt-layer:#122A49; --pt-top:#1F4673; --pt-top-stroke:#4F7FAE;
+  --pt-shadow:rgba(0,0,0,.55); --pt-pin-shadow:rgba(0,0,0,.45); --pt-drop:rgba(0,0,0,.4); --pt-drop-hot:rgba(0,0,0,.45); --pt-chip-shadow:rgba(0,0,0,.35);
+  --pt-stem-a:rgba(255,255,255,.1); --pt-stem-b:rgba(255,255,255,.7);
+  --pt-halo:rgba(14,173,165,.22); --pt-halo-hot:rgba(14,173,165,.28); --pt-halo-t:rgba(245,247,246,.14);
+  --pt-focus:#FDFFFE; --pt-chip:#FDFFFE; --pt-teal:#0EADA5; --pt-ink:#0B1F38; --pt-paper:#F5F7F6;
+  --pt-d-land:#C9BD9C; --pt-d-side:#E7E5E0; --pt-d-sea:#7C98A8; --pt-d-landink:#7D8B76; --pt-d-deg:#8FA2AE;
+}
+@property --tx { syntax: '<length>'; inherits: true; initial-value: 0px; }
+@property --ty { syntax: '<length>'; inherits: true; initial-value: 0px; }
+@property --k  { syntax: '<number>'; inherits: true; initial-value: 1; }
+
+.peta-stage{perspective:1700px;perspective-origin:50% 45%}
+/* --R: resolusi. Peta digambar R× lebih besar lalu ditampilkan dengan skala 1/R. Chrome merasterisasi konten
+   3D pada ukuran tata letaknya; tanpa ini peta pecah saat di-zoom. Panjang di dalam peta dikali R. */
+.peta{--R:1;--tx:0px;--ty:0px;--k:1;position:relative;flex:none;width:calc(100% * var(--R) * var(--fit,1));aspect-ratio:1000/381;transform-style:preserve-3d;
+  transform:translate3d(var(--tx),var(--ty),0) scale3d(var(--k),var(--k),var(--k)) rotateX(var(--rx,38deg));
+  transition:--tx .75s cubic-bezier(.2,.7,.2,1),--ty .75s cubic-bezier(.2,.7,.2,1),--k .75s cubic-bezier(.2,.7,.2,1)}
+.peta--instant,.peta--instant *{transition:none!important}
+.peta__layer{position:absolute;inset:0;width:100%;height:100%;overflow:visible;transform:translateZ(calc(var(--z,0px) * var(--R)));backface-visibility:hidden;pointer-events:none}
+.peta__layer use{fill:var(--pt-layer)}
+.peta__layer--top use{fill:var(--pt-top);stroke:var(--pt-top-stroke);stroke-width:calc(.5px * var(--R));stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.peta__shadow{position:absolute;inset:4% 2% -6% 2%;border-radius:50%;background:radial-gradient(50% 50% at 50% 50%,var(--pt-shadow),transparent 70%);transform:translateZ(calc(-22px * var(--R)));filter:blur(calc(18px * var(--R)));pointer-events:none}
+.peta__pins{position:absolute;inset:0;transform:translateZ(calc(2px * var(--R)));transform-style:preserve-3d;pointer-events:none}
+
+/* Pin: titik 0×0 pada bidang; isinya berdiri tegak dan di-counter-scale terhadap zoom */
+.peta-pin{position:absolute;width:0;height:0;padding:0;border:0;background:none;transform-style:preserve-3d;pointer-events:auto;cursor:pointer;outline:0;transition:opacity .4s cubic-bezier(0,.3,.4,1)}
+.peta--static .peta-pin{pointer-events:none;cursor:default}
+.peta-pin::after{content:"";position:absolute;left:-7px;top:-3px;width:14px;height:6px;border-radius:50%;background:var(--pt-pin-shadow);filter:blur(1px);transform:scale(calc(1 / var(--k,1)))}
+.peta-pin__up{position:absolute;left:-20px;bottom:0;width:40px;display:flex;flex-direction:column;align-items:center;transform-origin:50% 100%;
+  transform:rotateX(calc(-1 * var(--rx,38deg))) scale(calc(1 / var(--k,1)));transform-style:preserve-3d}
+.peta-pin__stem{width:1.5px;height:22px;background:linear-gradient(to top,var(--pt-stem-a),var(--pt-stem-b))}
+.peta-pin__dot{position:relative;width:12px;height:12px;border-radius:50%;background:var(--teal,var(--pt-teal));box-shadow:0 0 0 4px var(--pt-halo),0 6px 14px var(--pt-drop);
+  transition:transform .5s cubic-bezier(.19,1,.22,1),box-shadow .5s cubic-bezier(.19,1,.22,1)}
+.peta-pin__dot::after{content:"";position:absolute;inset:-10px;border-radius:50%}   /* area klik 32×32 */
+.peta-pin[data-cat="tambahan"] .peta-pin__dot{background:var(--ink,var(--pt-ink));border:2.5px solid var(--paper,var(--pt-paper));box-shadow:0 0 0 4px var(--pt-halo-t),0 6px 14px var(--pt-drop)}
+.peta-pin:focus-visible .peta-pin__dot{outline:2px solid var(--pt-focus);outline-offset:4px}
+.peta-pin.is-hot .peta-pin__dot,.peta-pin.is-sel .peta-pin__dot{transform:scale(1.25);box-shadow:0 0 0 7px var(--pt-halo-hot),0 8px 18px var(--pt-pin-shadow)}
+
+/* Label nama: chip putih teks navy, muncul saat hover/sorot dan pada pin terpilih */
+.peta-pin__chip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%,6px);white-space:nowrap;padding:4px 12px;border-radius:999px;
+  background:var(--pt-chip);color:var(--ink,var(--pt-ink));font-family:var(--ff,'Plus Jakarta Sans',system-ui,sans-serif);font-size:12px;line-height:16px;font-weight:600;letter-spacing:0;
+  box-shadow:0 8px 20px var(--pt-chip-shadow);pointer-events:none;
+  transition:opacity .25s cubic-bezier(0,.3,.4,1),transform .45s cubic-bezier(.19,1,.22,1),visibility 0s .25s}
+.js .peta-pin__chip{opacity:0;visibility:hidden}
+.peta-pin.is-hot .peta-pin__chip,.peta-pin.is-sel .peta-pin__chip{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .25s cubic-bezier(0,.3,.4,1),transform .45s cubic-bezier(.19,1,.22,1),visibility 0s}
+.peta-pin.is-hot{z-index:2}
+
+/* Saat ada provinsi terpilih: pin lain meredup, pin terpilih berdenyut */
+.peta.has-sel .peta-pin:not(.is-sel):not(.is-hot){opacity:.4}
+.peta-pin.is-sel .peta-pin__dot::before{content:"";position:absolute;inset:-2.5px;border-radius:50%;border:2px solid var(--teal,var(--pt-teal));animation:peta-pulse 1.8s cubic-bezier(0,.3,.4,1) infinite}
+@keyframes peta-pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+
+/* Pin muncul bergantian */
+.pins-wait .peta-pin__dot{transform:scale(0)}
+.pins-in .peta-pin__dot{transition:transform .7s cubic-bezier(.34,1.56,.64,1) calc(var(--i) * 60ms),box-shadow .5s cubic-bezier(.19,1,.22,1)}
+
+/* ---------- Detail: peta satu warna (opsi `detail` di Peta3D.mount) ----------
+   Daratan satu warna datar (krem pasir); sisi tebal abu-abu sangat muda, terbaca sebagai bayangan pulau.
+   Tanpa gradasi, relief, bayangan, atau kontur. Token dapat ditimpa halaman. */
+.peta--detail{--peta-land:var(--pt-d-land);--peta-side:var(--pt-d-side);--peta-coast:var(--pt-d-land);
+  --peta-sea-ink:var(--pt-d-sea);--peta-land-ink:var(--pt-d-landink);--peta-deg:var(--pt-d-deg)}
+.peta--detail .peta__shadow{display:none}
+.peta-stage.is-zoomed{cursor:grab;touch-action:none}
+.peta-stage.is-dragging{cursor:grabbing}
+.peta-stage.is-dragging .peta-pin{pointer-events:none}
+.peta--detail .peta__layer--top use{fill:var(--peta-land);stroke:var(--peta-coast);stroke-width:calc(.5px * var(--R))}
+.peta--detail .peta__layer--top use.peta__side{fill:var(--peta-side);stroke:var(--peta-side)}
+.peta__scale path{fill:none;stroke:var(--peta-deg);stroke-width:.6}
+.peta__deg{fill:var(--peta-deg);font-family:var(--ff,system-ui,sans-serif);font-size:5.4px;font-weight:500}
+.peta__lbl{pointer-events:none}
+.peta__lbl--sea{fill:var(--peta-sea-ink);font-family:var(--serif,Georgia,serif);font-size:6.4px;font-style:italic;font-weight:400}
+.peta__lbl--big{font-size:8.6px}
+.peta__lbl--land{fill:var(--peta-land-ink);font-family:var(--ff,system-ui,sans-serif);font-size:6.2px;font-weight:600}
+
+@media (prefers-reduced-motion:reduce){
+  .peta,.peta *{transition:none!important}
+  .peta-pin.is-sel .peta-pin__dot::before{animation:none;transform:scale(1.8);opacity:.6}
+}

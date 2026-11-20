@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skala | Architecture and interior design</title>
+  <meta name="description" content="Skala is an architecture and interior design studio that treats every project as an experience to build.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..500&family=Instrument+Serif:ital@0;1&family=Newsreader:opsz,wght@6..72,300&display=swap">
+  <link rel="preload" as="image" href="assets-img/herobanner/23536ec50ba6b9200267073aca20bb8e.jpg">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400&display=swap">
+  <link rel="stylesheet" href="assets/css/peta-3d.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arr" viewBox="0 0 12 12"><path d="M2.5 9.5l7-7M4 2.5h5.5V8" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 12 12"><path d="M6 0v12M0 6h12" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-left" viewBox="0 0 16 16"><path d="M15 8H1M7 2L1 8l6 6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-right" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 12 12"><path d="M0 6h12" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-fit" viewBox="0 0 14 14"><path d="M1 5V1h4M9 1h4v4M13 9v4H9M5 13H1V9" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  </svg>
+  <!-- Loader: the wordmark used as a mask over the first hero photo -->
+  <div class="loader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="loader__mask">
+      <svg class="loader__svg" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <mask id="skala-mask">
+            <rect width="100%" height="100%" fill="black"></rect>
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" class="loader__text">SKALA</text>
+          </mask>
+        </defs>
+        <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/1280px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" mask="url(#skala-mask)"></image>
+      </svg>
+    </div>
+  </div>
+
+  <nav class="navbar" aria-label="Main">
+    <a class="navbar__logo" href="#top" aria-label="SKALA, home"><img src="assets-img/logo/skala-putih.png" alt="SKALA, Sinergi dan Kolaborasi untuk Akselerasi Layanan Dasar" width="500" height="138"></a>
+    <div class="navbar__links">
+      <a class="btn" href="#studio"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">About</span><span class="btn__text" aria-hidden="true">About</span><span class="btn__text" aria-hidden="true">About</span></span></span></a>
+      <a class="btn" href="#projects"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Projects</span><span class="btn__text" aria-hidden="true">Projects</span><span class="btn__text" aria-hidden="true">Projects</span></span></span></a>
+      <a class="btn" href="#press"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Press</span><span class="btn__text" aria-hidden="true">Press</span><span class="btn__text" aria-hidden="true">Press</span></span></span></a>
+      <a class="btn" href="#services"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Services</span><span class="btn__text" aria-hidden="true">Services</span><span class="btn__text" aria-hidden="true">Services</span></span></span></a>
+    </div>
+    <a class="btn navbar__cta" href="#contact"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Contact us</span><span class="btn__text" aria-hidden="true">Contact us</span><span class="btn__text" aria-hidden="true">Contact us</span></span></span></a>
+    <button type="button" class="navbar__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true" inert>
+    <nav aria-label="Mobile">
+      <a href="#top">Home</a>
+      <a href="#studio">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#press">Press</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main id="top">
+        <h1 class="visually-hidden">Skala, architecture and interior design</h1>
+
+        <div class="home-layout">
+          <!-- ===================== HERO ===================== -->
+          <section class="hero-section panel" aria-label="Featured stories">
+            <div class="hero-background-image hero-bg-current" style="background-image:url('assets-img/herobanner/23536ec50ba6b9200267073aca20bb8e.jpg')"></div>
+            <div class="hero-background-image hero-bg-next" aria-hidden="true"></div>
+
+            <div class="hero-content">
+              <div class="hero-line">
+                <span class="hero-year">2026</span>
+                <a href="#story-1" class="hero-title-link">
+                  <div class="hero-title-container">
+                    <span class="hero-separator" aria-hidden="true">(</span>
+                    <span class="hero-title">Festival on the lake</span>
+                    <span class="hero-separator" aria-hidden="true">)</span>
+                  </div>
+                </a>
+                <div class="hero-line-cta">
+                  <a class="btn btn--large hero-view-project" href="#story-1"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">View story</span><span class="btn__text" aria-hidden="true">View story</span><span class="btn__text" aria-hidden="true">View story</span></span></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-bottom-row">
+              <div class="hero-nav"><button type="button" class="hero-arrow hero-arrow--prev" data-prev aria-label="Previous story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button><button type="button" class="hero-arrow" data-next aria-label="Next story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button></div>
+            </div>
+          </section>
+
+          <!-- ===================== THE PRACTICE + RESIDENCES ===================== -->
+          <!-- Placeholder copy and stand-in photos: replace with the studio's own words and work -->
+          <div class="tone" id="tone">
+          <section class="panel band-practice" id="practice" data-band data-tone="cream" aria-label="The practice">
+            <div class="pr-builder">
+              <section class="pr-heading">
+                <div class="pr-container">
+                  <header class="pr-grid pr-heading__header">
+                    <h2 class="pr-suptitle"><span>Strengthening systems.</span> <span>Improving lives.</span></h2>
+                    <div class="pr-heading__content">
+                      <p class="pr-heading__title">SKALA is an Australia-Indonesia partnership working to strengthen local governance and improve the delivery of basic services. By bringing together government institutions, development partners, and communities, we support more inclusive, responsive, and evidence-informed policies that create lasting impact across Indonesia.</p>
+                    </div>
+                  </header>
+                </div>
+              </section>
+
+
+              <!-- Key facts. DUMMY DATA for the mockup (data-placeholder): replace every figure with verified numbers, then remove the note line. -->
+              <section class="pr-facts" aria-labelledby="facts-title">
+                <div class="pr-container pr-grid">
+                  <h2 class="pr-suptitle" id="facts-title">SKALA at a Glance</h2>
+                  <dl class="pr-facts__list">
+                    <div class="pr-fact">
+                      <dt class="pr-fact__label">People reached with emergency aid in 2025</dt>
+                      <dd class="pr-fact__value" data-placeholder><span data-count="1.2" data-decimals="1">1.2</span>M</dd>
+                    </div>
+                    <div class="pr-fact">
+                      <dt class="pr-fact__label">Provinces where our field teams work</dt>
+                      <dd class="pr-fact__value" data-placeholder><span data-count="18" data-decimals="0">18</span></dd>
+                    </div>
+                    <div class="pr-fact">
+                      <dt class="pr-fact__label">Local partners, from village health posts to youth groups</dt>
+                      <dd class="pr-fact__value" data-placeholder><span data-count="340" data-decimals="0">340</span></dd>
+                    </div>
+                    <div class="pr-fact">
+                      <dt class="pr-fact__label">Of every donation spent directly on programmes</dt>
+                      <dd class="pr-fact__value" data-placeholder><span data-count="92" data-decimals="0">92</span>%</dd>
+                    </div>
+                  </dl>
+                </div>
+              </section>
+
+              <section class="pr-double" aria-label="Approach">
+                <div class="pr-container pr-grid">
+                  <div class="pr-double__left">
+                    <div class="pr-double__desc"><p>Driving inclusive development through stronger local governance, better access to basic services, and meaningful collaboration. Across Indonesia, SKALA works alongside government institutions and local partners to turn evidence into action and support lasting improvements for communities.</p></div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="practice-left" data-alt="Officials meet residents with disabilities about vehicle tax relief in East Nusa Tenggara"><img src="https://skala.or.id/wp-content/uploads/2026/08/DSC07898-scaled.jpg" alt="Officials meet residents with disabilities about vehicle tax relief in East Nusa Tenggara" width="2056" height="3088" loading="lazy" decoding="async"></div>
+                    </div>
+                  </div>
+                  <div class="pr-double__right">
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="practice-right" data-alt="Officials discuss disability data governance in North Kalimantan"><img src="https://skala.or.id/wp-content/uploads/2026/08/DSC2312-scaled.jpg" alt="Officials discuss disability data governance in North Kalimantan" width="3597" height="2697" loading="lazy" decoding="async"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+                <!-- ===================== PARTNERS ===================== -->
+                <!-- Partner logos are the owner's own files in assets-img/partner-logo -->
+                <section class="partners" id="partners" aria-labelledby="partners-title">
+                  <div class="panel-container">
+                    <div class="partners__head"><h2 class="news-sub" id="partners-title">Partners and implementers</h2></div>
+                    <div class="partners__marquee">
+                      <div class="partners__track">
+                        <ul class="partners__group">
+                          <li class="partner partner--keuangan"><img src="assets-img/partner-logo/Kementrian%20Keuangan%20.png" alt="Kementerian Keuangan Republik Indonesia" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--dagri"><img src="assets-img/partner-logo/kementrian%20dalam%20negeri.svg" alt="Kementerian Dalam Negeri Republik Indonesia" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--bappenas"><img src="assets-img/partner-logo/bappenaslogo.webp" alt="Kementerian PPN/Bappenas, Badan Perencanaan Pembangunan Nasional" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--aus"><img src="assets-img/partner-logo/australian-goverment-logo.webp" alt="Australian Government" loading="lazy" decoding="async"></li>
+                        </ul>
+                        <ul class="partners__group" aria-hidden="true">
+                          <li class="partner partner--keuangan"><img src="assets-img/partner-logo/Kementrian%20Keuangan%20.png" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--dagri"><img src="assets-img/partner-logo/kementrian%20dalam%20negeri.svg" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--bappenas"><img src="assets-img/partner-logo/bappenaslogo.webp" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--aus"><img src="assets-img/partner-logo/australian-goverment-logo.webp" alt="" loading="lazy" decoding="async"></li>
+                        </ul>
+                        <ul class="partners__group" aria-hidden="true">
+                          <li class="partner partner--keuangan"><img src="assets-img/partner-logo/Kementrian%20Keuangan%20.png" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--dagri"><img src="assets-img/partner-logo/kementrian%20dalam%20negeri.svg" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--bappenas"><img src="assets-img/partner-logo/bappenaslogo.webp" alt="" loading="lazy" decoding="async"></li>
+                          <li class="partner partner--aus"><img src="assets-img/partner-logo/australian-goverment-logo.webp" alt="" loading="lazy" decoding="async"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              <section class="pr-acc" aria-labelledby="topics-title">
+                <div class="pr-container">
+                  <header class="pr-grid pr-acc__header">
+                    <div class="pr-acc__left">
+                      <h2 class="pr-suptitle" id="topics-title">Programme areas</h2>
+                      <p>Our work is organised around six topics. Choose one to see where we work on it, what we have learned and how you can take part.</p>
+                    </div>
+                  </header>
+                  <!-- Slider: add or remove .card blocks freely; the buttons, snap and drag adapt to any count -->
+                  <div class="pr-acc__list" id="topics-track" data-slider role="region" aria-label="Programme areas, scroll sideways" tabindex="0">
+                <!-- Six topic cards. DUMMY copy and stand-in photos; each card links to its Topic Hub page (set the real URLs in href). -->
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-data-driven-governance" aria-describedby="topic-desc-01"><span class="visually-hidden">Data-Driven Governance, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 01</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-01" data-alt="Forum Satu Data Provinsi Papua in Jayapura"><img src="https://skala.or.id/wp-content/uploads/2026/09/DSC01502-scaled.jpg" alt="Forum Satu Data Provinsi Papua in Jayapura" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Data-Driven Governance</p>
+                      <p class="card__desc" id="topic-desc-01">Strengthening data systems and evidence-based decision-making for better public policies.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Data-Driven Governance</h3>
+                </div>
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-local-governance-strengthening" aria-describedby="topic-desc-02"><span class="visually-hidden">Local Governance Strengthening, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 02</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-02" data-alt="SIPD capacity building for Maluku government staff"><img src="https://skala.or.id/wp-content/uploads/2026/09/DSC_0345-scaled.jpg" alt="SIPD capacity building for Maluku government staff" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Local Governance Strengthening</p>
+                      <p class="card__desc" id="topic-desc-02">Enhancing local government capacity, coordination, and institutional effectiveness.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Local Governance Strengthening</h3>
+                </div>
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-equitable-basic-services" aria-describedby="topic-desc-03"><span class="visually-hidden">Equitable Basic Services, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 03</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-03" data-alt="Launch of NTB minimum service standards action plan"><img src="https://skala.or.id/wp-content/uploads/2026/09/IMG_9956-scaled.jpg" alt="Launch of NTB minimum service standards action plan" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Equitable Basic Services</p>
+                      <p class="card__desc" id="topic-desc-03">Supporting more accessible and equitable delivery of essential public services.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Equitable Basic Services</h3>
+                </div>
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-inclusive-development-approach" aria-describedby="topic-desc-04"><span class="visually-hidden">Inclusive Development Approach, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 04</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-04" data-alt="Gender-responsive planning workshop in Central Papua"><img src="https://skala.or.id/wp-content/uploads/2026/10/foto2_landscape.jpg" alt="Gender-responsive planning workshop in Central Papua" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Inclusive Development Approach</p>
+                      <p class="card__desc" id="topic-desc-04">Integrating gender equality, disability, and social inclusion into development processes.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Inclusive Development Approach</h3>
+                </div>
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-regional-fiscal-strengthening" aria-describedby="topic-desc-05"><span class="visually-hidden">Regional Fiscal Strengthening, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 05</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-05" data-alt="Forum on strengthening local revenue in Bekasi"><img src="https://skala.or.id/wp-content/uploads/2026/09/IMG_5375.jpg" alt="Forum on strengthening local revenue in Bekasi" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Regional Fiscal Strengthening</p>
+                      <p class="card__desc" id="topic-desc-05">Improving subnational fiscal management and resource allocation for basic services.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Regional Fiscal Strengthening</h3>
+                </div>
+                <div class="card card--topic">
+                  <a class="card__link" href="#topic-strategic-policy-collaboration" aria-describedby="topic-desc-06"><span class="visually-hidden">Strategic Policy Collaboration, topic hub</span></a>
+                  <div class="card__inner">
+                    <div class="card__overlay">
+                      <div class="card__label"><span class="pill">Topic 06</span><span class="pill pill--icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></div>
+                    </div>
+                    <div class="pr-media" data-parallax>
+                      <div class="pr-media__target" data-slot="topic-06" data-alt="Officials exchange signed agreements at the Boalemo data portal launch"><img src="https://skala.or.id/wp-content/uploads/2026/09/IMGL4080.jpg" alt="Officials exchange signed agreements at the Boalemo data portal launch" width="460" height="560" loading="lazy" decoding="async"></div>
+                    </div>
+                    <div class="card__detail">
+                      <p class="card__detail-title" aria-hidden="true">Strategic Policy Collaboration</p>
+                      <p class="card__desc" id="topic-desc-06">Connecting government institutions and development partners to advance policy implementation.</p>
+                      <span class="card__more" aria-hidden="true">Explore topic</span>
+                    </div>
+                  </div>
+                  <h3 class="card__title">Strategic Policy Collaboration</h3>
+                </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <!-- ===================== FEEL AT HOME (third reference: scroll tunnel) ===================== -->
+          <!-- Stand-in photos; the reference's outlined logo is replaced by the image in .tunnel__logo -->
+          <section class="tunnel" id="feel-at-home" data-tone="night" aria-label="Stronger Systems. Better Lives.">
+            <div class="tunnel__stage">
+              <div class="tunnel__logo" data-slot="tunnel-logo" aria-hidden="true"><img src="assets/img-senada/kegiatan-papua-barat-daya-1000.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.7794" data-slot="tunnel-1" aria-hidden="true"><img src="assets/img-senada/kegiatan-ntb-1000.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.5000" data-slot="tunnel-2" aria-hidden="true"><img src="assets/img-senada/prov-kaltara-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.5015" data-slot="tunnel-3" aria-hidden="true"><img src="assets/img-senada/kegiatan-papua-selatan-1000.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.3333" data-slot="tunnel-4" aria-hidden="true"><img src="assets/img-senada/prov-papua-pegunungan-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.7778" data-slot="tunnel-5" aria-hidden="true"><img src="assets/img-senada/prov-aceh-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.7778" data-slot="tunnel-6" aria-hidden="true"><img src="assets/img-senada/prov-gorontalo-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.3333" data-slot="tunnel-7" aria-hidden="true"><img src="assets/img-senada/prov-papua-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__shot" data-ratio="1.7647" data-slot="tunnel-8" aria-hidden="true"><img src="assets/img-senada/prov-ntt-960.webp" alt="" decoding="async" loading="eager" fetchpriority="low" draggable="false"></div>
+              <div class="tunnel__text">
+                <h2 class="tunnel__title" aria-label="Stronger Systems. Better Lives."><span class="tunnel__word" aria-hidden="true"><span>Stronger</span></span><span class="tunnel__word" aria-hidden="true"><span>Systems.</span></span><span class="tunnel__word" aria-hidden="true"><span>Better</span></span><span class="tunnel__word" aria-hidden="true"><span>Lives.</span></span></h2>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================== WILAYAH KERJA (hidden for now: remove the hidden attribute to bring it back) ===================== -->
+          <section class="wk" id="wilayah" data-tone="paper" aria-labelledby="wk-h" hidden>
+            <header class="wk__head">
+              <h2 id="wk-h" data-s="title" data-up>Wilayah kerja</h2>
+              <div class="wk__side" data-up>
+                <p class="wk__sub" data-s="sub">Pilih provinsi untuk melihat fokus program di wilayah tersebut.</p>
+                <a class="more" href="https://skalavibes.vercel.app/wilayah.html"><span data-s="explore">Jelajahi wilayah kerja</span><i class="fx__arr" aria-hidden="true"><svg aria-hidden="true"><use href="#i-arr"/></svg><svg aria-hidden="true"><use href="#i-arr"/></svg></i></a>
+              </div>
+            </header>
+            <div class="wk__body" id="wk-body">
+              <div class="wk__stage" id="wk-stage"></div>
+              <div class="wzoom" role="group" aria-label="Kontrol peta" id="wzoom">
+                <button type="button" class="wzoom__fit" id="wz-fit" aria-label="Tampilkan seluruh peta"><svg aria-hidden="true"><use href="#i-fit"/></svg></button>
+                <span class="wzoom__pair">
+                  <button type="button" id="wz-in" aria-label="Perbesar peta"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+                  <button type="button" id="wz-out" aria-label="Perkecil peta"><svg aria-hidden="true"><use href="#i-minus"/></svg></button>
+                </span>
+              </div>
+              <ul class="wk__key" aria-hidden="true"><li><span><i class="lg"></i><span data-s="cat.utama">Lokasi intervensi utama</span></span></li><li><span><i class="lg lg--t"></i><span data-s="cat.tambahan">Lokasi intervensi tambahan</span></span></li></ul>
+              <div class="wpanel" id="wpanel">
+                <ul class="wlegend">
+                  <li><i class="lg" aria-hidden="true"></i><span data-s="cat.utama">Lokasi intervensi utama</span></li>
+                  <li><i class="lg lg--t" aria-hidden="true"></i><span data-s="cat.tambahan">Lokasi intervensi tambahan</span></li>
+                </ul>
+                <ul class="wlist" id="wlist" aria-label="Daftar provinsi wilayah kerja"></ul>
+              </div>
+              <section class="wdetail" id="wdetail" aria-labelledby="wd-name" inert>
+                <span class="wdetail__handle" aria-hidden="true"></span>
+                <div class="wdetail__top">
+                  <span class="wchip" id="wd-cat"></span>
+                  <div class="wdetail__ctrl">
+                    <button type="button" class="wbtn" id="wd-prev" aria-label="Provinsi sebelumnya"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+                    <button type="button" class="wbtn" id="wd-next" aria-label="Provinsi berikutnya"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+                    <button type="button" class="wbtn" id="wd-close" aria-label="Tutup detail provinsi"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+                  </div>
+                </div>
+                <div class="wdetail__scroll" data-lenis-prevent>
+                  <div class="wdetail__ph" id="wd-ph"></div>
+                  <h3 class="wdetail__name" id="wd-name" tabindex="-1"></h3>
+                  <p class="wdetail__sum" id="wd-sum"></p>
+                  <dl class="wstats" id="wd-stats"></dl>
+                  <h4 class="wfocus__h" data-s="focusLabel">Fokus program</h4>
+                  <ul class="wfocus" id="wd-focus" tabindex="0" aria-label="Fokus program, geser ke samping"></ul>
+                </div>
+                <a class="wdetail__go" id="wd-go" href="https://skalavibes.vercel.app/wilayah.html"><span data-s="profile">Lihat profil provinsi</span><i class="wdetail__goi" aria-hidden="true"><svg aria-hidden="true"><use href="#i-arr"/></svg></i></a>
+              </section>
+            </div>
+            <a class="more wk__more" href="https://skalavibes.vercel.app/wilayah.html"><span data-s="explore">Jelajahi wilayah kerja</span><i class="fx__arr" aria-hidden="true"><svg aria-hidden="true"><use href="#i-arr"/></svg><svg aria-hidden="true"><use href="#i-arr"/></svg></i></a>
+            <p class="visually-hidden" id="wk-live" aria-live="polite"></p>
+          </section>
+
+
+          <!-- ===================== GOAL & OUTCOMES (after the reference "communities" orbit) =====================
+               DUMMY CONTENT for the mockup: replace the goal, the counts and the outcome names with the programme's results framework. -->
+          <section class="go" id="goals" data-tone="light" aria-labelledby="go-title">
+            <div class="go__wrap">
+              <div class="go__stage" data-focus="">
+                <svg class="go__arcs" viewBox="0 0 100 50" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><circle class="go__arc" cx="50" cy="50" r="47" pathLength="1"/><circle class="go__arc" cx="50" cy="50" r="33" pathLength="1"/></svg>
+                <div class="go__orbit" aria-hidden="true">
+                  <div class="go-item" data-ring="outer" style="--a:138deg;--r:47"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">1</span>Data-Driven Governance</span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:166deg;--r:47"><div class="go-item__in"><span class="go-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 5.5h6a2 2 0 0 1 2 2V19a2 2 0 0 0-2-2h-6zM19.5 5.5h-6a2 2 0 0 0-1 .3M19.5 5.5V17h-6a2 2 0 0 0-1 .3"/></svg></span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:112deg;--r:47"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">3</span>Equitable Basic Services</span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:84deg;--r:47"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">4</span>Inclusive Development Approach</span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:60deg;--r:47"><div class="go-item__in"><span class="go-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg/330px-Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg" alt="" width="96" height="96" loading="lazy" decoding="async"></span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:30deg;--r:47"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">6</span>Strategic Policy Collaboration</span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:18deg;--r:47"><div class="go-item__in"><span class="go-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20v-8M12 12c0-3.5-2.5-6-6.5-6 0 3.5 2.5 6 6.5 6zM12 14c0-3 2.2-5.5 6.5-5.5 0 3-2.2 5.5-6.5 5.5z"/></svg></span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:295deg;--r:47"><div class="go-item__in"><span class="go-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/330px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg" alt="" width="96" height="96" loading="lazy" decoding="async"></span></div></div>
+                  <div class="go-item" data-ring="outer" style="--a:330deg;--r:47"><div class="go-item__in"><span class="go-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c3.5 4.4 6 7.6 6 10.5a6 6 0 0 1-12 0c0-2.9 2.5-6.1 6-10.5z"/></svg></span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:158deg;--r:33"><div class="go-item__in"><span class="go-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/330px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg" alt="" width="96" height="96" loading="lazy" decoding="async"></span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:132deg;--r:33"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">2</span>Local Governance Strengthening</span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:110deg;--r:33"><div class="go-item__in"><span class="go-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Entrance_lobby_of_Amantaka_luxury_Resort_%26_Hotel_at_blue_hour_in_Luang_Prabang_Laos.jpg/330px-Entrance_lobby_of_Amantaka_luxury_Resort_%26_Hotel_at_blue_hour_in_Luang_Prabang_Laos.jpg" alt="" width="96" height="96" loading="lazy" decoding="async"></span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:88deg;--r:33"><div class="go-item__in"><span class="go-tile"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-6.5L20 11M6.5 9.5V19h11V9.5M10 19v-5h4v5"/></svg></span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:64deg;--r:33"><div class="go-item__in"><span class="go-chip"><span class="go-chip__badge">5</span>Regional Fiscal Strengthening</span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:28deg;--r:33"><div class="go-item__in"><span class="go-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div></div>
+                  <div class="go-item" data-ring="inner" style="--a:300deg;--r:33"><div class="go-item__in"><span class="go-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Brettsperrholzkonstruktion.jpg/330px-Brettsperrholzkonstruktion.jpg" alt="" width="96" height="96" loading="lazy" decoding="async"></span></div></div>
+                </div>
+                <dl class="go__stats">
+                  <div class="go-stat" data-group="goal"><dt class="go-stat__label">Programme goal</dt><dd class="go-stat__value" data-placeholder><span data-count="1">1</span></dd></div>
+                  <div class="go-stat" data-group="eopo"><dt class="go-stat__label">End-of-program outcomes</dt><dd class="go-stat__value" data-placeholder><span data-count="3">3</span></dd></div>
+                  <div class="go-stat" data-group="io"><dt class="go-stat__label">Intermediate outcomes</dt><dd class="go-stat__value" data-placeholder><span data-count="9">9</span></dd></div>
+                </dl>
+              </div>
+              <h2 class="go__title" id="go-title" data-up>Stronger local systems. Better basic services. More inclusive development.</h2>
+              <!-- The Wilayah kerja map again: click a pin or a province, zoom, detail card (same script, own ids; mounted by main.js) -->
+              <div class="go__geo">
+                <div class="wk__body" id="go-body">
+                  <div class="wk__stage" id="go-stage"></div>
+                  <div class="wzoom" role="group" aria-label="Kontrol peta">
+                    <button type="button" class="wzoom__fit" id="gz-fit" aria-label="Tampilkan seluruh peta"><svg aria-hidden="true"><use href="#i-fit"/></svg></button>
+                    <span class="wzoom__pair">
+                      <button type="button" id="gz-in" aria-label="Perbesar peta"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+                      <button type="button" id="gz-out" aria-label="Perkecil peta"><svg aria-hidden="true"><use href="#i-minus"/></svg></button>
+                    </span>
+                  </div>
+                  <div class="wpanel"><ul class="wlist" id="go-list" aria-label="Daftar provinsi wilayah kerja"></ul></div>
+                  <section class="wdetail" id="go-detail" aria-labelledby="gd-name" inert>
+                    <span class="wdetail__handle" aria-hidden="true"></span>
+                    <div class="wdetail__top">
+                      <span class="wchip" id="gd-cat"></span>
+                      <div class="wdetail__ctrl">
+                        <button type="button" class="wbtn" id="gd-prev" aria-label="Provinsi sebelumnya"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+                        <button type="button" class="wbtn" id="gd-next" aria-label="Provinsi berikutnya"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+                        <button type="button" class="wbtn" id="gd-close" aria-label="Tutup detail provinsi"><svg aria-hidden="true"><use href="#i-plus"/></svg></button>
+                      </div>
+                    </div>
+                    <div class="wdetail__scroll" data-lenis-prevent>
+                      <div class="wdetail__ph" id="gd-ph"></div>
+                      <h3 class="wdetail__name" id="gd-name" tabindex="-1"></h3>
+                      <p class="wdetail__sum" id="gd-sum"></p>
+                      <dl class="wstats" id="gd-stats"></dl>
+                      <h4 class="wfocus__h">Fokus program</h4>
+                      <ul class="wfocus" id="gd-focus" tabindex="0" aria-label="Fokus program, geser ke samping"></ul>
+                    </div>
+                    <a class="wdetail__go" id="gd-go" href="https://skalavibes.vercel.app/wilayah.html"><span>Lihat profil provinsi</span><i class="wdetail__goi" aria-hidden="true"><svg aria-hidden="true"><use href="#i-arr"/></svg></i></a>
+                  </section>
+                </div>
+                <p class="visually-hidden" id="go-live" aria-live="polite"></p>
+              </div>
+              <div class="go__tags" data-up role="group" aria-label="Goal and outcomes">
+                <button type="button" class="go-tag" data-show="goal" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="3.5"/></svg>Goal</button>
+                <button type="button" class="go-tag" data-show="eopo" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20.5V4.5M6 5h11l-2.5 3.5L17 12H6"/></svg>End-of-program outcomes</button>
+                <button type="button" class="go-tag" data-show="io" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18.5h5v-4.5h5V9.5h6"/></svg>Intermediate outcomes</button>
+                <a class="go-tag" href="#results-framework"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l4 4v13H7zM14 3.5v4h4M9.5 12.5h6M9.5 16h6"/></svg>Results framework</a>
+              </div>
+              <p class="go__note">Illustrative goal and outcomes for layout only, to be replaced with the programme’s results framework.</p>
+            </div>
+          </section>
+
+          <!-- ===================== GOVERNMENT DATA SYSTEMS ===================== -->
+          <!-- Government data systems: the owner's logo files in assets-img/Goverment; each href still needs the system's own URL -->
+          <section class="systems" id="systems" data-tone="paper" aria-labelledby="systems-title">
+            <div class="panel-container">
+              <div class="systems__inner">
+                <div class="systems__intro">
+                  <h2 class="systems__title" id="systems-title">Government data systems</h2>
+                  <div class="systems__nav">
+                    <button type="button" class="news-arrow news-arrow--prev" data-systems-prev aria-controls="systems-pages" aria-label="Previous systems"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button>
+                    <span class="systems__count" aria-live="polite">1 / 2</span>
+                    <button type="button" class="news-arrow" data-systems-next aria-controls="systems-pages" aria-label="Next systems"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button>
+                  </div>
+                </div>
+                <div class="systems__viewport" id="systems-pages" data-systems>
+                  <ul class="systems__page is-active" aria-label="Systems 1 to 8">
+                    <li><a class="system" href="#system-01"><img src="assets-img/Goverment/SIPD.png" alt="SIPD, Sistem Informasi Pemerintahan Daerah" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-02"><img src="assets-img/Goverment/sdpdn-1.jpg" alt="SDPDN, Satu Data Pemerintahan Dalam Negeri" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-03"><img src="assets-img/Goverment/sikd-logo.png" alt="SIKD" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-04"><img src="assets-img/Goverment/espm.png" alt="e-SPM, Pelaporan Penerapan SPM" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-05"><img src="assets-img/Goverment/Sepakat_logo_500.jpg" alt="SEPAKAT" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-06"><img src="assets-img/Goverment/Sikompak_logo_500.jpg" alt="SIKOMPAK" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-07"><img src="assets-img/Goverment/SD-Aceh.jpg" alt="Satu Data Aceh" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-08"><img src="assets-img/Goverment/SIGAP.png" alt="SIGAP, Sistem Informasi Gampong" loading="lazy" decoding="async"></a></li>
+                  </ul>
+                  <ul class="systems__page" aria-label="Systems 9 to 16">
+                    <li><a class="system" href="#system-09"><img src="assets-img/Goverment/3-Logo-SIOPAPUA.png" alt="SIO Papua" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-10"><img src="assets-img/Goverment/SIPPP.jpeg" alt="SIPPP, Sistem Informasi Percepatan Pembangunan Papua" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-11"><img src="assets-img/Goverment/saik_logo-500.jpg" alt="SAIK+ Papua Barat" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-12"><img src="assets-img/Goverment/sidassken.jpg" alt="SIDASSKEN, Sistem Informasi Data Sektoral Satu Noken" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-13"><img src="assets-img/Goverment/PENTAGON.png" alt="PENTAGON, Open Data Gorontalo" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-14"><img src="assets-img/Goverment/SD-Kaltara-500.png" alt="Dataku, Sidara Cantik 2.0 Kalimantan Utara" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-15"><img src="assets-img/Goverment/satudata_ntb.png" alt="Satu Data NTB" loading="lazy" decoding="async"></a></li>
+                    <li><a class="system" href="#system-16"><img src="assets-img/Goverment/WhatsApp-Image-2025-09-16-at-2.49.05-PM.jpeg" alt="Sasando, Satu Data Provinsi Nusa Tenggara Timur" loading="lazy" decoding="async"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================== THE STUDIO (hidden for now: remove the hidden attribute to bring it back) ===================== -->
+          <section class="panel panel-band" id="studio" data-band hidden>
+            <div class="panel-container">
+              <section class="studio panel-section" aria-labelledby="studio-title">
+                <div class="studio__content">
+                  <div class="studio__title">
+                    <h2 class="title" id="studio-title" data-title-reveal>
+                      <span class="title__wrap"><span>THE</span></span>
+                      <span class="title__wrap"><span>STUDIO</span></span>
+                    </h2>
+                  </div>
+
+                  <div class="studio__btn-reveal">
+                    <div class="studio__btn-wrap" data-studio-btn>
+                      <a class="btn" href="#studio-page"><span class="btn__viewport"><span class="btn__content">
+                        <span class="btn__text">Get to know our studio<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span>
+                        <span class="btn__text" aria-hidden="true">Get to know our studio<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span>
+                        <span class="btn__text" aria-hidden="true">Get to know our studio<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span>
+                      </span></span></a>
+                    </div>
+                  </div>
+
+                  <div class="studio__reveal">
+                    <p class="studio__description" data-studio-desc>
+                      <span>An architecture and interior design studio that transforms spaces and designs experiences.<br><br></span><span><br><br></span><span>We build projects that express function and movement, carrying our clients' character into every line of the plan.</span>
+                    </p>
+                  </div>
+
+                  <!-- Placeholder cities: replace with the studio's real locations -->
+                  <div class="studio__sedes" data-studio-sedes>
+                    <span class="studio__sedes-item"><span class="studio__sedes-text">Jakarta</span></span>
+                    <span class="studio__sedes-item"><span class="studio__sedes-text">Bali</span></span>
+                    <span class="studio__sedes-item"><span class="studio__sedes-text">Bandung</span></span>
+                  </div>
+
+                  <div class="studio__image studio__image--mobile" data-slot="studio-mobile" data-alt="Studio">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/960px-Crest_kitchenette_motel_stairwell.jpg" alt="A lit concrete stairwell inside a dark building" width="800" height="1147" loading="lazy" decoding="async">
+                  </div>
+                </div>
+
+                <div class="studio__image studio__image--desktop" data-slot="studio-desktop" data-alt="Studio">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/1280px-Crest_kitchenette_motel_stairwell.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/960px-Crest_kitchenette_motel_stairwell.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/1280px-Crest_kitchenette_motel_stairwell.jpg 1280w" sizes="(max-width: 1024px) 100vw, 606px" alt="A lit concrete stairwell inside a dark building" width="606" height="745" loading="lazy" decoding="async">
+                </div>
+              </section>
+
+              <div class="separator" aria-hidden="true">
+                <svg class="separator__diagonal" viewBox="0 0 80 73" fill="none"><path d="M0 72.3794L40.9996 0.500117"/></svg>
+                <div class="separator__line"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===================== NEWS (latest news and articles) ===================== -->
+          <!-- News and articles: titles, dates, links and photos are SKALA's own, linked from skala.or.id (the images load from that site) -->
+          <section class="band-press band-news" id="news" data-band data-tone="night" aria-labelledby="news-title">
+            <div class="panel-container">
+              
+              <section class="press news panel-section">
+                <h2 class="pr-suptitle news__title" id="news-title">Latest news</h2>
+                <div class="press__button"><a class="btn" href="https://skala.or.id/informasi-kegiatan/"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Explore all news<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span><span class="btn__text" aria-hidden="true">Explore all news<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span><span class="btn__text" aria-hidden="true">Explore all news<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span></span></span></a></div>
+                <div class="news-top">
+                  <article class="news-feature">
+                    <a class="news-feature__link" href="https://skala.or.id/informasi-kegiatan/pemkab-raja-ampat-mulai-menyalurkan-bantuan-sosial-orisun-bagi-lansia-orang-asli-papua/">
+                      <span class="news-feature__media"><img src="https://skala.or.id/wp-content/uploads/2026/11/20261015_113200-scaled.jpg" alt="Pemkab Raja Ampat Mulai Menyalurkan Bantuan Sosial ORISUN bagi Lansia Orang Asli Papua" width="2560" height="1440" loading="lazy" decoding="async"></span>
+                      <span class="news-feature__body"><span class="press-line__meta"><span class="press-line__index">01</span><span class="press-line__type">News</span></span><span class="news-feature__title">Pemkab Raja Ampat Mulai Menyalurkan Bantuan Sosial ORISUN bagi Lansia Orang Asli Papua</span><span class="news-meta"><span class="press-line__date">19 Nov 2026</span></span></span>
+                    </a>
+                  </article>
+                  <div class="news-latest">
+                    <h3 class="news-sub">Latest news</h3>
+                    <ul class="press-list news-list">
+                      <li class="press-item news-row"><a class="news-row__link" href="https://skala.or.id/informasi-kegiatan/menjaga-layanan-dasar-di-tengah-transisi-kepemimpinan-daerah/"><span class="news-row__thumb"><img src="https://skala.or.id/wp-content/uploads/2026/11/DSC00447-scaled.jpg" alt="" width="96" height="54" loading="lazy" decoding="async"></span><span class="news-row__body"><span class="press-line__meta"><span class="press-line__index">02</span><span class="press-line__type">News</span></span><span class="news-row__title">Menjaga Layanan Dasar di Tengah Transisi Kepemimpinan Daerah</span><span class="news-meta"><span class="press-line__date">13 Nov 2026</span></span></span></a></li>
+                      <li class="press-item news-row"><a class="news-row__link" href="https://skala.or.id/informasi-kegiatan/papua-barat-daya-luncurkan-portal-cenderawasih-untuk-perkuat-perencanaan-pembangunan-dan-layanan-dasar/"><span class="news-row__thumb"><img src="https://skala.or.id/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-11-at-18.31.33.jpeg" alt="" width="96" height="54" loading="lazy" decoding="async"></span><span class="news-row__body"><span class="press-line__meta"><span class="press-line__index">03</span><span class="press-line__type">News</span></span><span class="news-row__title">Papua Barat Daya Luncurkan Portal Cenderawasih untuk Perkuat Perencanaan Pembangunan dan Layanan Dasar</span><span class="news-meta"><span class="press-line__date">12 Nov 2026</span></span></span></a></li>
+                      <li class="press-item news-row"><a class="news-row__link" href="https://skala.or.id/informasi-kegiatan/papua-selatan-perkuat-data-dan-perlindungan-sosial-bagi-orang-asli-papua/"><span class="news-row__thumb"><img src="https://skala.or.id/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-09-at-19.09.44-1.jpeg" alt="" width="96" height="54" loading="lazy" decoding="async"></span><span class="news-row__body"><span class="press-line__meta"><span class="press-line__index">04</span><span class="press-line__type">News</span></span><span class="news-row__title">Papua Selatan Perkuat Data dan Perlindungan Sosial bagi Orang Asli Papua</span><span class="news-meta"><span class="press-line__date">10 Nov 2026</span></span></span></a></li>
+                      <li class="press-item news-row"><a class="news-row__link" href="https://skala.or.id/informasi-kegiatan/ntb-luncurkan-dashboard-eksekutif-untuk-memperkuat-pembangunan-berbasis-data/"><span class="news-row__thumb"><img src="https://skala.or.id/wp-content/uploads/2026/11/IMG_6761-scaled.jpg" alt="" width="96" height="54" loading="lazy" decoding="async"></span><span class="news-row__body"><span class="press-line__meta"><span class="press-line__index">05</span><span class="press-line__type">News</span></span><span class="news-row__title">NTB Luncurkan Dashboard Eksekutif untuk Memperkuat Pembangunan Berbasis Data</span><span class="news-meta"><span class="press-line__date">6 Nov 2026</span></span></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="news-articles">
+                  <div class="news-articles__head">
+                    <h3 class="news-sub" id="articles-title">Articles</h3>
+                    <div class="news-nav">
+                      <button type="button" class="news-arrow news-arrow--prev" data-slider-prev aria-controls="articles-track" aria-label="Previous articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button>
+                      <button type="button" class="news-arrow" data-slider-next aria-controls="articles-track" aria-label="Next articles"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button>
+                    </div>
+                  </div>
+                  <ul class="news-track" id="articles-track" data-slider aria-labelledby="articles-title" tabindex="0">
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/informasi-kegiatan/sekar-inklusif-sistem-manajemen-pembelajaran-untuk-memperkuat-partisipasi-masyarakat-dalam-proses-pembangunan/"><span class="news-card__media"><img src="https://skala.or.id/wp-content/uploads/2026/11/DSC00061-scaled.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">01</span><span class="press-line__type">Activity</span></span><span class="news-card__title">SEKAR Inklusif: Sistem Manajemen Pembelajaran untuk Memperkuat Partisipasi Masyarakat dalam Proses Pembangunan</span><span class="news-meta"><span class="press-line__date">6 Nov 2026</span></span></a></li>
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/informasi-kegiatan/menguatkan-kemandirian-fiskal-daerah-melalui-local-tax-ratio/"><span class="news-card__media"><img src="https://skala.or.id/wp-content/uploads/2026/10/DSC09925-scaled.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">02</span><span class="press-line__type">Activity</span></span><span class="news-card__title">Menguatkan Kemandirian Fiskal Daerah melalui Local Tax Ratio</span><span class="news-meta"><span class="press-line__date">30 Oct 2026</span></span></a></li>
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/informasi-kegiatan/maluku-perkuat-perencanaan-pembangunan-adaptif-hadapi-risiko-kenaikan-muka-air-laut/"><span class="news-card__media"><img src="https://skala.or.id/wp-content/uploads/2026/10/DSC6277-scaled.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">03</span><span class="press-line__type">Activity</span></span><span class="news-card__title">Maluku Perkuat Perencanaan Pembangunan Adaptif Hadapi Risiko Kenaikan Muka Air Laut</span><span class="news-meta"><span class="press-line__date">22 Oct 2026</span></span></a></li>
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/publikasi/mendorong-penganggaran-pemerintah-pusat-yang-lebih-responsif-terhadap-tantangan-geografis-daerah/"><span class="news-card__media"><img src="assets/img-senada/prov-kaltara-960.webp" alt="Kantor pemerintah daerah di Kalimantan Utara" width="960" height="640" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">04</span><span class="press-line__type">Story</span></span><span class="news-card__title">Mendorong Penganggaran Pemerintah Pusat yang Lebih Responsif terhadap Tantangan Geografis Daerah</span><span class="news-meta"><span class="press-line__date">21 Oct 2026</span></span></a></li>
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/publikasi/sigap-menggerakkan-tata-kelola-data-di-aceh/"><span class="news-card__media"><img src="assets/img-senada/prov-aceh-960.webp" alt="Kota di Aceh dari udara" width="960" height="540" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">05</span><span class="press-line__type">Story</span></span><span class="news-card__title">SIGAP Menggerakkan Tata Kelola Data di Aceh</span><span class="news-meta"><span class="press-line__date">28 Sep 2026</span></span></a></li>
+                    <li class="press-item news-card"><a class="news-card__link" href="https://skala.or.id/publikasi/membangun-kepercayaan-warga-memperkuat-data-oap-papua-selatan-dari-kampung/"><span class="news-card__media"><img src="assets/img-senada/kegiatan-papua-selatan-1000.webp" alt="Peluncuran SIRIOS di Papua Selatan" width="1000" height="666" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">06</span><span class="press-line__type">Story</span></span><span class="news-card__title">Membangun Kepercayaan Warga, Memperkuat Data OAP Papua Selatan dari Kampung</span><span class="news-meta"><span class="press-line__date">25 Sep 2026</span></span></a></li>
+                  </ul>
+                </div>
+              <div class="news-articles news-pubs" id="press">
+<div class="news-articles__head"><h3 class="news-sub" id="pubs-title">Publications</h3><div class="news-articles__tools"><div class="press__button press__button--head"><a class="btn" href="#publications-all"><span class="btn__viewport"><span class="btn__content"><span class="btn__text">Explore all publications<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span><span class="btn__text" aria-hidden="true">Explore all publications<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span><span class="btn__text" aria-hidden="true">Explore all publications<svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true"><path d="M1.16537 -0.000325094L9.16536 7.99967L9.16537 0.833009L10.832 0.833009L10.832 10.833L0.832031 10.833L0.832031 9.16634L7.9987 9.16634L-0.00130187 1.16634L1.16537 -0.000325094Z" fill="currentColor"/></svg></span></span></span></a></div><div class="news-nav"><button type="button" class="news-arrow news-arrow--prev" data-slider-prev aria-controls="pubs-track" aria-label="Previous publications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button><button type="button" class="news-arrow" data-slider-next aria-controls="pubs-track" aria-label="Next publications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></button></div></div></div>
+<ul class="news-track" id="pubs-track" data-slider aria-labelledby="pubs-title" tabindex="0">
+<li class="press-item news-card"><a class="news-card__link" href="#publication-01"><span class="news-card__media"><img src="assets/img-publikasi/publikasi-1.jpg" alt="Cover of SEPAKAT untuk Perencanaan yang Lebih Tepat Sasaran" width="1000" height="1414" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">01</span><span class="press-line__type">Story booklet</span></span><span class="news-card__title">SEPAKAT untuk Perencanaan yang Lebih Tepat Sasaran</span><span class="news-card__excerpt">Cerita Pemanfaatan Data dari Berbagai Daerah</span><span class="news-meta"><span class="press-line__date">November 2026</span><span class="press-line__publisher">Story booklet</span></span></a></li>
+<li class="press-item news-card"><a class="news-card__link" href="#publication-02"><span class="news-card__media"><img src="assets/img-publikasi/publikasi-2.jpg" alt="Cover of Menembus Ombak, Menjangkau Masyarakat" width="1000" height="1414" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">02</span><span class="press-line__type">Report</span></span><span class="news-card__title">Menembus Ombak, Menjangkau Masyarakat</span><span class="news-card__excerpt">Kolaborasi Menguatkan Layanan Dasar di Kepulauan Maluku</span><span class="news-meta"><span class="press-line__date">October 2026</span><span class="press-line__publisher">Report</span></span></a></li>
+<li class="press-item news-card"><a class="news-card__link" href="#publication-03"><span class="news-card__media"><img src="assets/img-publikasi/publikasi-3.jpg" alt="Cover of Kumpulan Naskah Risalah Kebijakan (Policy Brief) Terpilih" width="1000" height="1414" loading="lazy" decoding="async"></span><span class="press-line__meta"><span class="press-line__index">03</span><span class="press-line__type">Policy briefs</span></span><span class="news-card__title">Kumpulan Naskah Risalah Kebijakan (Policy Brief) Terpilih</span><span class="news-card__excerpt">Tentang Analisis Belanja dan Pendapatan Publik (PERA) yang Inklusif: Provinsi Kalimantan Utara</span><span class="news-meta"><span class="press-line__date">September 2026</span><span class="press-line__publisher">Policy briefs</span></span></a></li>
+</ul></div>
+              </section>
+            </div>
+          </section>
+
+          
+          </div><!-- /.tone -->
+          <!-- ===================== CTA (second reference) ===================== -->
+          <!-- CTA: copy from the owner; photo from skala.or.id (Lawamena Satu Data workshop, Ambon), loaded from that site -->
+          <section class="cta" id="work-with-us" aria-labelledby="cta-title">
+            <div class="cta__expander tg-u">
+              <div class="pr-container pr-grid">
+                <div class="cta__content">
+                  <h2 class="cta__suptitle" id="cta-title">Work with us</h2>
+                  <p class="cta__title">Building stronger systems takes collective action.</p>
+                  <div class="cta__description"><p>Join SKALA in strengthening local governance, advancing inclusive development, and improving access to basic services across Indonesia.</p></div>
+                  <a class="btn-pill btn-pill--beige" href="#contact"><span class="btn-pill__label">Explore Partnership</span><span class="btn-pill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></a>
+                </div>
+              </div>
+              <div class="cta__cover pr-media" data-parallax>
+                <div class="pr-media__target" data-slot="cta" data-alt="Lawamena Satu Data workshop in Ambon"><img src="https://skala.or.id/wp-content/uploads/2026/10/DSC_0175-scaled.jpg" alt="Regional government staff working together at a Lawamena Satu Data workshop in Ambon, Maluku" width="1920" height="1440" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- ===================== FOOTER (second reference) ===================== -->
+      <!-- Placeholder addresses and social links: replace with the studio's own -->
+      <footer class="site-footer" id="contact">
+        <div class="footer__inner tg-u">
+          <div class="pr-container footer__container">
+            <div class="footer__groups">
+                  <div class="footer__group">
+                    <div class="footer-acc">
+                      <span><button type="button" class="footer__title footer-acc__toggle" aria-expanded="false" aria-controls="footer-acc-1">Explore<svg viewBox="0 0 24 24" class="icon-plus" aria-hidden="true"><polygon points="12.5 18 11.5 18 11.5 12.5 6 12.5 6 11.5 11.5 11.5 11.5 6 12.5 6 12.5 11.5 18 11.5 18 12.5 12.5 12.5 12.5 18"/></svg></button></span>
+                      <div class="footer-acc__expander" id="footer-acc-1">
+                        <div class="footer-acc__clip">
+                          <nav class="footer-acc__inner" aria-label="Explore navigation"><ul class="footer__list"><li><a href="#practice">About SKALA</a></li><li><a href="#feel-at-home">Our Approach</a></li><li><a href="#topics-title">Program Areas</a></li><li><a href="#projects">Projects</a></li><li><a href="#goals">Our Impact</a></li></ul></nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer__group">
+                    <div class="footer-acc">
+                      <span><button type="button" class="footer__title footer-acc__toggle" aria-expanded="false" aria-controls="footer-acc-2">Resources<svg viewBox="0 0 24 24" class="icon-plus" aria-hidden="true"><polygon points="12.5 18 11.5 18 11.5 12.5 6 12.5 6 11.5 11.5 11.5 11.5 6 12.5 6 12.5 11.5 18 11.5 18 12.5 12.5 12.5 12.5 18"/></svg></button></span>
+                      <div class="footer-acc__expander" id="footer-acc-2">
+                        <div class="footer-acc__clip">
+                          <nav class="footer-acc__inner" aria-label="Resources navigation"><ul class="footer__list"><li><a href="#press">Publications</a></li><li><a href="#news">News &amp; Stories</a></li><li><a href="#media-centre">Media Centre</a></li><li><a href="https://skala.or.id/laporan/">Reports</a></li></ul></nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer__group">
+                    <div class="footer-acc">
+                      <span><button type="button" class="footer__title footer-acc__toggle" aria-expanded="false" aria-controls="footer-acc-3">Partnership<svg viewBox="0 0 24 24" class="icon-plus" aria-hidden="true"><polygon points="12.5 18 11.5 18 11.5 12.5 6 12.5 6 11.5 11.5 11.5 11.5 6 12.5 6 12.5 11.5 18 11.5 18 12.5 12.5 12.5 12.5 18"/></svg></button></span>
+                      <div class="footer-acc__expander" id="footer-acc-3">
+                        <div class="footer-acc__clip">
+                          <nav class="footer-acc__inner" aria-label="Partnership navigation"><ul class="footer__list"><li><a href="#partners">Our Partners</a></li><li><a href="#work-with-us">Collaborate with Us</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer__group">
+                    <p class="footer__title">Connect</p>
+                    <div class="footer__content">
+                      <p class="footer__headline">Stay connected with SKALA.</p>
+                      <p>Follow our latest updates, insights, and stories on inclusive development across Indonesia.</p>
+                      <button class="btn-pill btn-pill--beige" type="button" data-drawer-open aria-controls="drawer" aria-haspopup="dialog"><span class="btn-pill__label">Follow SKALA</span><span class="btn-pill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></button>
+                    </div>
+                  </div>
+            </div>
+            <div class="footer__meta">
+              <p class="footer__copyright">© 2026 SKALA. All rights reserved.</p>
+              <ul class="footer__list footer__legal"><li><a href="#privacy">Privacy Policy</a></li><li><a href="#terms">Terms of Use</a></li></ul>
+              <span class="footer__credits"><span>Photographs (stand-ins), Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg">Basile Morin</a>, <a href="https://commons.wikimedia.org/wiki/File:Fragment_of_160_Front_Street_West,_Toronto.jpg">Maksim Sokolov</a>, <a href="https://commons.wikimedia.org/wiki/File:1_Hotel_Miami_Beach_May_2015_(41).jpg">Clairecato321</a>, <a href="https://commons.wikimedia.org/wiki/File:Saxon_style_timber_roof_structure_inside_St_Aidan%27s_Church_in_Bamburgh.jpg">Stephencdickson</a>, <a href="https://commons.wikimedia.org/wiki/File:Croix_villa_cavrois_chambre_parents_fused.jpg">Velvet</a>, <a href="https://commons.wikimedia.org/wiki/File:Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg">Mario Kleff</a>, <a href="https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg">Sarah Clark</a> (CC BY-SA 4.0); <a href="https://commons.wikimedia.org/wiki/File:Brettsperrholzkonstruktion.jpg">RoterRolf</a> (CC0).</span></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ===================== NEWSLETTER DRAWER (second reference) ===================== -->
+  <!-- The form is not connected to a service yet: set data-endpoint on the form to wire it -->
+  <div id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true" inert>
+    <div class="drawer__panel">
+      <button type="button" class="drawer__close" aria-label="Close" data-drawer-close><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="9.35 15.35 8.65 14.65 11.29 12 8.65 9.35 9.36 8.65 12 11.29 14.64 8.65 15.35 9.35 12.71 12 15.35 14.65 14.65 15.35 12 12.7 9.35 15.35"/></svg></button>
+      <div class="drawer__inner">
+        <div class="drawer__content" data-lenis-prevent>
+          <form class="newsletter" novalidate data-newsletter>
+            <header>
+              <p class="newsletter__title" id="drawer-title">Subscribe to our newsletter</p>
+              <p class="newsletter__text">Leave your details if you would like to hear about new work from the studio.</p>
+            </header>
+            <div class="newsletter__fields">
+              <div class="form-row" role="radiogroup" aria-label="I am">
+                <div class="form-radio"><input id="role-client" type="radio" name="role" value="client"><label for="role-client"><span class="form-radio__ticker"></span>I am a client</label></div>
+                <div class="form-radio"><input id="role-partner" type="radio" name="role" value="partner"><label for="role-partner"><span class="form-radio__ticker"></span>I am an industry partner</label></div>
+              </div>
+              <div class="form-field"><label class="visually-hidden" for="newsletter-firstName">First name</label><input placeholder="First Name *" required aria-required="true" id="newsletter-firstName" type="text" name="firstName" autocomplete="given-name"><span class="form-field__message" aria-live="polite"></span></div>
+              <div class="form-field"><label class="visually-hidden" for="newsletter-lastName">Last name</label><input placeholder="Last Name *" required aria-required="true" id="newsletter-lastName" type="text" name="lastName" autocomplete="family-name"><span class="form-field__message" aria-live="polite"></span></div>
+              <div class="form-field"><label class="visually-hidden" for="newsletter-email">Email</label><input placeholder="Email *" required aria-required="true" id="newsletter-email" type="email" name="email" autocomplete="email"><span class="form-field__message" aria-live="polite"></span></div>
+            </div>
+            <div class="form-check"><input id="terms" type="checkbox" name="terms" required><label for="terms"><span class="form-check__ticker"><svg viewBox="0 0 7 5" aria-hidden="true"><path d="M2.7,5,0,2.3l.7-.7,2,2L6.3,0,7,.7Z"/></svg></span>Agree to Terms Of Use</label></div>
+            <button class="btn-pill btn-pill--light" type="submit"><span class="btn-pill__label">Submit</span><span class="btn-pill__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.52,15.48l-.6-.59,2.46-2.46h-6.38v-.86h6.38l-2.46-2.46.6-.6,3.48,3.48-3.48,3.48Z"/></svg></span></button>
+            <p class="newsletter__message" role="status" hidden></p>
+          </form>
+        </div>
+        <div class="bamboo drawer__bamboo" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="drawer__backdrop" data-drawer-close></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+  <script src="assets/data/provinsi.js"></script>
+  <script src="assets/js/peta-3d.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
