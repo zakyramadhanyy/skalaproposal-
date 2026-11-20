@@ -25,19 +25,16 @@
     <symbol id="i-minus" viewBox="0 0 12 12"><path d="M0 6h12" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
     <symbol id="i-fit" viewBox="0 0 14 14"><path d="M1 5V1h4M9 1h4v4M13 9v4H9M5 13H1V9" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
   </svg>
-  <!-- Loader: the wordmark used as a mask over the first hero photo -->
-  <div class="loader" role="status" aria-live="polite" aria-label="Loading">
-    <div class="loader__mask">
-      <svg class="loader__svg" viewBox="0 0 600 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-        <defs>
-          <mask id="skala-mask">
-            <rect width="100%" height="100%" fill="black"></rect>
-            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" class="loader__text">SKALA</text>
-          </mask>
-        </defs>
-        <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/1280px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg" x="0" y="0" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" mask="url(#skala-mask)"></image>
+  <!-- Loader (the reference's opening): a green cover, the SKALA logo uncovered stroke by stroke, then the cover lifts away -->
+  <div class="loader" aria-hidden="true">
+    <span class="loader__logo">
+      <img src="assets-img/logo/skala-putih.png" alt="" width="500" height="138" decoding="async">
+      <svg class="loader__strokes" viewBox="0 0 500 138" preserveAspectRatio="xMidYMid meet" focusable="false">
+        <path class="loader__stroke loader__stroke--mark" d="M100 69a34 34 0 1 1-68 0a34 34 0 1 1 68 0"/>
+        <path class="loader__stroke loader__stroke--word" d="M145 46.5H495"/>
+        <path class="loader__stroke loader__stroke--line" d="M145 100H495"/>
       </svg>
-    </div>
+    </span>
   </div>
 
   <nav class="navbar" aria-label="Main">

@@ -778,29 +778,59 @@
     },
   });
 
-  /* ---------- hero intro (after the loader) ---------- */
-  const introEls = $$('.hero-year, .hero-title-container, .hero-line-cta, .hero-nav');
-  if (!reduced) { gsap.set(introEls, { opacity: 0, y: 16 }); gsap.set(bgCurrent, { scale: 1.08 }); }
-
-  const playIntro = () => {
+  /* ---------- opening + hero intro: the reference's sequence, values as it ships them ----------
+   * 1. green cover; scrolling held
+   * 2. at 0.2s the logo is uncovered: each cover-coloured stroke is erased along its length (0.8s, sine.out, 0.25s apart)
+   * 3. once drawn and the page has loaded, the cover lifts: clip-path to inset(0 0 100% 0) (0.8s, power2.inOut, 0.05s delay)
+   * 4. 0.29s into the lift the hero comes in: title letters rise out of a blur (1.6s, expo.out, 50ms apart),
+   *    the other hero text fades out of a blur (1s), the photo settles from scale 1.1 to 1 (2s, expo.out) */
+  const blurEls = $$('.hero-year, .hero-separator, .hero-line-cta, .hero-nav');
+  const splitTitle = () => {
+    const t = titleEl.textContent;
+    const esc = (ch) => ch.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+    titleEl.innerHTML = `<span class="visually-hidden">${esc(t)}</span>` +
+      Array.from(t).map((ch) => `<span class="hero-char" aria-hidden="true">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`).join('');
+    return $$('.hero-char', titleEl);
+  };
+  const chars = reduced ? [] : splitTitle();
+  if (!reduced) {
+    gsap.set(chars, { display: 'inline-block', yPercent: 100, filter: 'blur(5px)' });
+    gsap.set(blurEls, { opacity: 0, filter: 'blur(5px)' });
+    gsap.set(bgCurrent, { scale: 1.1 });
+  }
+  const heroIn = () => {
     if (reduced) return;
     const tl = gsap.timeline();
-    tl.to(bgCurrent, { scale: 1, duration: 1.6, ease: EASE_OUT }, 0);
-    tl.to(introEls, { opacity: 1, y: 0, duration: 0.8, ease: EASE_OUT, stagger: 0.06, clearProps: 'transform' }, 0.15);
+    tl.to(chars, { yPercent: 0, filter: 'blur(0px)', duration: 1.6, ease: 'expo.out', stagger: 0.05, clearProps: 'filter,transform' }, 0);
+    tl.to(blurEls, { opacity: 1, filter: 'blur(0px)', duration: 1, ease: 'power3.out', clearProps: 'filter' }, 0);
+    tl.to(bgCurrent, { scale: 1, duration: 2, ease: 'expo.out' }, 0);
   };
 
-  const hideLoader = () => {
-    if (!loader || loader.dataset.done) return;
-    loader.dataset.done = '1';
-    const done = () => { if (loader.isConnected) { loader.remove(); ScrollTrigger.refresh(); } };
-    gsap.to(loader, { opacity: 0, duration: reduced ? 0 : 0.6, ease: EASE_OUT, onComplete: done });
-    setTimeout(done, 1500); // safety net if rAF is throttled
-    playIntro();
+  const finish = () => { if (loader && loader.isConnected) loader.remove(); if (lenis) lenis.start(); ScrollTrigger.refresh(); };
+  let unveiled = false;
+  const unveil = () => {
+    if (unveiled) return;
+    unveiled = true;
+    if (!loader || reduced) { finish(); heroIn(); return; }
+    gsap.timeline({ onComplete: finish })
+      .to(loader, { clipPath: 'inset(0% 0% 100% 0%)', duration: 0.8, ease: 'power2.inOut', delay: 0.05 }, 0)
+      .call(heroIn, null, 0.29);
   };
-  const minDelay = new Promise((r) => setTimeout(r, reduced ? 0 : 1200));
-  const loaded = new Promise((r) => (document.readyState === 'complete' ? r() : window.addEventListener('load', r, { once: true })));
-  Promise.all([minDelay, loaded, document.fonts ? document.fonts.ready : Promise.resolve()]).then(hideLoader);
-  setTimeout(hideLoader, 5000);
+
+  if (loader && !reduced) {
+    if (lenis) lenis.stop();
+    const strokes = $$('.loader__stroke', loader);
+    const lens = strokes.map((p) => Math.ceil(p.getTotalLength()));
+    strokes.forEach((p, i) => gsap.set(p, { strokeDasharray: `${lens[i]} ${lens[i]}`, strokeDashoffset: 2 * lens[i] }));
+    const drawn = new Promise((r) => {
+      gsap.to(strokes, { strokeDashoffset: (i) => lens[i], duration: 0.8, ease: 'sine.out', stagger: 0.25, delay: 0.2, onComplete: r });
+    });
+    const loaded = new Promise((r) => (document.readyState === 'complete' ? r() : window.addEventListener('load', r, { once: true })));
+    Promise.all([drawn, loaded]).then(unveil);
+    setTimeout(unveil, 6000); // the reference's failsafe: never hold the page longer than 6s
+  } else {
+    unveil();
+  }
 
   /* ---------- next project: clip-path wipe ---------- */
   let wipe = null;

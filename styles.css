@@ -101,12 +101,18 @@ h1, h2 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
 .panel-band :focus-visible, .band-practice :focus-visible { outline-color: var(--c-focus-ink); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-/* ---------- loader (only with scripting) ---------- */
+/* ---------- loader (only with scripting): the reference's opening cover ---------- */
 .loader { display: none; }
-.js .loader { z-index: 9999; background-color: var(--c-ink); justify-content: center; align-items: center; width: 100%; height: 100svh; display: flex; position: fixed; inset: 0; }
-.loader__mask { justify-content: center; align-items: center; width: 100%; max-width: 90%; height: 30svh; min-height: 120px; display: flex; }
-.loader__svg { width: 100%; height: 100%; max-height: 200px; }
-.loader__text { font-family: var(--font-ex); font-stretch: 125%; fill: var(--c-white); letter-spacing: -.02em; font-size: 140px; font-weight: 400; user-select: none; }
+.js .loader { z-index: 9999; position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: var(--c-veld); clip-path: inset(0%); }
+.loader__logo { position: relative; display: block; width: 200px; }
+.loader__logo img { display: block; width: 100%; height: auto; }
+/* Strokes in the cover's own colour sit over the logo and hide it; the script erases them along their length. */
+.loader__strokes { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.loader__stroke { fill: none; stroke: var(--c-veld); }
+.loader__stroke--mark { stroke-width: 74px; }
+.loader__stroke--word { stroke-width: 58px; }
+.loader__stroke--line { stroke-width: 40px; }
+@media (prefers-reduced-motion: reduce) { .js .loader { display: none; } }
 
 /* ---------- button (triple-stack roll) ---------- */
 .btn { --button-line-height: 1.25em; --button-hover-gap: .3em; font-family: var(--font-regular); color: inherit; cursor: pointer; vertical-align: middle; background: none; border: none; align-items: center; min-height: 44px; line-height: 1; display: inline-flex; position: relative; }
